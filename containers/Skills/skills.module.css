@@ -1,0 +1,189 @@
+.heading {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  align-self: flex-start;
+  position: relative;
+}
+
+.headText {
+  color: white;
+}
+
+.heading:after {
+  content: "";
+  display: block;
+  width: 300px;
+  height: 1px;
+  background: var(--slate);
+  left: 18rem;
+  top: 50%;
+  opacity: 0.2;
+  position: absolute;
+}
+
+.highlight {
+  color: var(--green);
+  font-size: 1.1rem;
+}
+
+.skillContainer {
+  width: 100%;
+  margin-top: 2rem;
+  display: flex;
+}
+
+.skillList {
+  flex: 1;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.skillItem {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  margin: 1rem;
+  transition: all 0.5s;
+}
+
+.skillImg {
+  width: 90px;
+  height: 90px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--slate);
+  border-radius: 50%;
+}
+
+.skillImg > img {
+  width: 60%;
+  height: 60%;
+}
+
+.skillImg:hover {
+    box-shadow: 0 0 20px var(--green);
+}
+
+.skillItem>p {
+    font-weight: 500;
+}
+
+.skillImg:hover .skillItem>p {
+    color: var(--green);
+}
+
+
+/* Experiences  */
+
+.skillExperience {
+  flex: 1;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-direction: column;
+}
+
+.experienceItem {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  margin: 1rem 0;
+}
+
+.skillExpYear {
+  margin: 4px 3rem 0 0;
+}
+
+.skillExpYear > p {
+  font-weight: 800;
+  color: var(--green);
+}
+
+.skillExpWorks {
+  flex: 1;
+  cursor: pointer;
+}
+
+.skillExpWork {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  margin-bottom: 1rem;
+  cursor: pointer;
+}
+
+.skillExpWork > h4 {
+  font-weight: 500;
+  color: var(--light-slate);
+  margin-bottom: 0;
+}
+
+.skillExpWork > p {
+  font-weight: 400;
+  margin-top: 5px;
+}
+
+.desc {
+  font-size: 12px;
+  width: fit-content;
+  border: 1px solid #8892b068;
+  color: var(--green);
+  border-radius: 4px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.18);
+  padding: 4px;
+  opacity: 0;
+  position: relative;
+  top: -110px;
+  left: 50px;
+  transition: all 0.3 ease;
+}
+
+.skillExpWorks:hover .desc,
+.skillExpWorks:active .desc,
+.skillExpWorks:focus .desc {
+  opacity: 1;
+}
+
+@media screen and (max-width: 450px) {
+  .skillExpYear {
+    margin-right: 1rem;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .heading:after {
+    width: 150px;
+    left: 11.5rem;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .skillContainer {
+    width: 100%;
+    flex-direction: column;
+  }
+
+  .skillList {
+    justify-content: center;
+    align-items: center;
+  }
+
+  .skillExperience {
+    margin-top: 2rem;
+  }
+}
+
+@media screen and (min-width: 2000px) {
+    .skillImg {
+        width: 150px;
+        height: 150px;
+    }
+
+    .skillItem>p {margin-top: 1rem;}
+}

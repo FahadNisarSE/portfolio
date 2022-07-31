@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=Edu+VIC+WA+NT+Beginner:wght@500&display=swap');
+
+
+html {
+  --navy: #0a192f;
+  --slate: #8892b0;
+  --green: #64ffda;
+  --light-slate: #a8b2d1;
+  --lightest-navy: #233554;
+}
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  background-color: var(--navy);
+  scroll-behavior: smooth;
+  scroll-padding-top: 150px;
+  width: 100%;
+  color: var(--slate);
+  caret-color: var(--navy);
+}
+/* font-family: 'Edu VIC WA NT Beginner', cursive; */
+
+main, footer {
+  max-width: 1200px;
+  margin-inline: auto;
+}
+
+#about, #home, #skills, #work, #contact {
+  min-height: 100vh;
+  margin-inline: 3.3rem 2rem;
+  
+  display: flex;
+  flex-direction: column;
+  padding-top: 50px;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+.flex {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.glassBackground {
+  background: rgba(255, 255, 255 0.7);
+  --webkit-backdrop-filter: blur(4px);
+  backdrop-filter: blur(4px);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.18);
+}
+
+.green {
+  color: var(--green);
+}
+
+.pText {
+  font-size: 14px;
+  line-height: 1.5rem;
+}
+
+.boldText {
+  font-size: 1.2rem;
+  font-weight: 800;
+}
+
+@media screen and (max-width: 600px) {
+  #about, #home, #skills, #work, #contact {
+    margin-inline: 2rem;
+  }
+}

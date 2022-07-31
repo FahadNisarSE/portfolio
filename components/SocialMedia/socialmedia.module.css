@@ -1,0 +1,33 @@
+.social {
+    align-self: flex-end;
+    margin-bottom: 6rem;
+    height: 130px;
+    width: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    cursor: pointer;
+}
+
+.icon {
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid var(--slate);
+    border-radius: 50%;
+    margin-bottom: 4px;
+    transition: all 0.3s ease-in-out;
+}
+
+.icon:hover {
+    color: var(--green);
+    border-color: var(--green);
+}
+
+@media screen and (max-width: 600px) {
+    .social {
+        display: none;
+    }
+}

@@ -1,0 +1,191 @@
+.projects {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.headText {
+  color: white;
+}
+
+.heading {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  align-self: flex-start;
+  position: relative;
+}
+
+.heading:after {
+  content: "";
+  display: block;
+  width: 300px;
+  height: 1px;
+  background: var(--slate);
+  left: 12rem;
+  top: 50%;
+  opacity: 0.2;
+  position: absolute;
+}
+
+.highlight {
+  color: var(--green);
+  font-size: 1.1rem;
+}
+
+.projectFilter {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: 1rem 0 2rem 0;
+}
+
+.projectFilterItem {
+  cursor: pointer;
+  background: transparent;
+  width: 8rem;
+  height: 2.3rem;
+  font-size: 0.9rem;
+  text-align: center;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  border: 1px solid var(--green);
+  color: var(--green);
+  transition: all 0.3s ease;
+}
+
+.projectFilterItem:hover,
+.active {
+  background-color: #64ffdb49;
+}
+
+.projectCardContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.pojectCard {
+  width: 270px;
+  display: flex;
+  flex-direction: column;
+  margin: 2rem;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  transition: all 0.3s ease;
+  background-color: var(--lightest-navy);
+  cursor: pointer;
+}
+
+.pojectCard:hover {
+  box-shadow: 0 0 6px var(--green);
+}
+
+.Img {
+  display: flex;
+  width: 100%;
+  height: 230px;
+  position: relative;
+}
+
+.Img > img {
+  width: 100%;
+  height: 100%;
+  border-radius: 4px;
+  object-fit: cover;
+}
+
+.projectHover {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 999;
+  background-color: #23355453;
+  border-radius: 0.5rem;
+  opacity: 0;               
+  /* Need to modify opacity for smaller devices so link are visible on smaller devices */
+  transition: all 0.3s ease;
+}
+
+.icon {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: var(--lightest-navy);
+  color: var(--green);
+}
+
+.icon > svg {
+  width: 100%;
+  height: 100%;
+  padding: 8px;
+}
+
+.projectContent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0.5rem;
+  width: 100%;
+  position: relative;
+}
+
+.projectContent > h4 {
+  margin-top: 1rem;
+  margin-bottom: 0;
+  line-height: 1.5;
+}
+
+.projectTags {
+  position: absolute;
+  font-size: 10px;
+  display: flex;
+  align-items: center;
+  height: 30px;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  background-color: var(--lightest-navy);
+  color: var(--green);
+  top: -29px;
+}
+
+@media screen and (min-width: 2000px) {
+  .projectFilterItem {
+    padding: 1rem 2rem;
+  }
+
+  .pojectCard {
+    width: 470px;
+    padding: 1.25rem;
+    border-radius: 0.75rem;
+  }
+
+  .Img {
+    height: 350px;
+  }
+}
+
+@media screen and (max-width: 300px) {
+  .pojectCard {
+    width: 100%;
+    margin: 1rem;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .heading:after {
+    width: 150px;
+    left: 11.5rem;
+  }
+  .projectHover {
+    opacity: 1 !important;
+  }
+}

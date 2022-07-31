@@ -1,0 +1,156 @@
+.heading {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  align-self: flex-start;
+  position: relative;
+}
+
+.headText {
+  color: white;
+}
+
+.heading:after {
+  content: "";
+  display: block;
+  width: 300px;
+  height: 1px;
+  background: var(--slate);
+  left: 11rem;
+  top: 50%;
+  opacity: 0.2;
+  position: absolute;
+}
+
+.highlight {
+  color: var(--green);
+  font-size: 1.1rem;
+}
+
+.footerContent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.footerCards {
+  width: 60%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: 4rem 2rem 2rem;
+}
+
+.footerCard {
+  min-width: 290px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 1rem;
+
+  margin: 1rem 0;
+  padding: 1rem;
+  border-radius: 10px;
+  cursor: pointer;
+
+  border: 1px solid var(--light-slate);
+
+  transition: all 0.3s ease-in-out;
+}
+
+.footerCard:last-child {
+  background-color: #64ffdb2a;
+}
+
+.footerCard:hover {
+  box-shadow: 0 0 6px var(--green);
+}
+
+.footerCard > a {
+  font-weight: 500;
+}
+
+.form {
+  width: 60%;
+  flex-direction: column;
+  margin: 1rem 2rem;
+}
+
+.form > div {
+  width: 100%;
+  margin: 0.75rem 0;
+  border-radius: 10px;
+  cursor: pointer;
+  background-color: var(--lightest-navy);
+
+  transition: all 0.3s ease-in-out;
+}
+
+.input,
+.textarea {
+  width: 100%;
+  padding: 0.95rem;
+  border: none;
+  border-radius: 7px;
+
+  background-color: var(--lightest-navy);
+
+  font-family: -apple-system sans-serif;
+  font-size: 14px;
+  line-height: 1.5rem;
+  color: white;
+  outline-color: none;
+}
+
+.textarea {
+  height: 170px;
+}
+
+.form > div:last-child {
+  margin-top: 2.5rem;
+  background-color: transparent;
+  display: flex;
+}
+
+.button {
+  width: 9rem;
+  height: 3rem;
+  margin-inline: auto;
+
+  color: var(--green);
+  background-color: transparent;
+  border: 1px solid var(--green);
+  outline: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.button:hover,
+.button:focus {
+  background-color: #64ffdb49;
+}
+
+.copyRight {
+  display: flex;
+  margin-inline: auto;
+  margin-block: 1rem;
+  color: white;
+}
+
+@media screen and (max-width: 600px) {
+  .heading:after {
+    width: 150px;
+    left: 11.5rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .footerCard {
+    width: 100%;
+  }
+  .form {
+    width: 100%;
+    margin: 1rem, 0;
+  }
+}

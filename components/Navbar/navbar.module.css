@@ -1,0 +1,150 @@
+/* Apply the width and glassBackground in the page */
+
+#navContainer {
+  height: 80px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 999;
+}
+
+.appNavbar { 
+  width: clamp(50%, 2000px, 100%);
+  display: flex;
+  align-items: center;
+  padding: 0 2rem;
+  margin-inline: auto;
+}
+
+.appNavbarLogo {
+  width: fit-content;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.navbarLinkContainer {
+  display: flex;
+  align-items: center;
+}
+
+.appNavbarLinks {
+  display: flex;
+  align-items: center;
+  margin-inline: auto;
+  gap: 1rem;
+  cursor: pointer;
+}
+
+#link {
+  text-transform: capitalize;
+  transition: color ease-in-out;
+}
+
+#link:hover {
+  color: var(--green);
+}
+
+#resumeButton {
+  width: 6rem;
+  height: 2.3rem;
+  color: var(--green);
+  background-color: transparent;
+  border: 1px solid var(--green);
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+#resumeButton:hover,
+#resumeButton:focus {
+  background-color: #64ffdb49;
+}
+
+#numbering {
+  margin-right: 0.5rem;
+  margin-left: 1rem;
+  color: var(--green);
+}
+
+/* Mobile Navigation */
+
+.navMenuContainer {
+  position: absolute;
+  width: 80vw;
+  height: 100vh;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 4rem 4rem 0 0;
+  background-color: var(--navy);
+}
+
+#crossIcon {
+  align-self: flex-end;
+}
+
+.navMenuContainer > div {
+  align-self: center;
+}
+
+.appNavbarMenuIcon {
+  transform: scale(2);
+  color: var(--green);
+  position: relative;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.appNavMenuLinks {
+  list-style: none;
+  margin: 3rem;
+}
+
+.appNavMenuLink {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  text-transform: uppercase;
+  transition: color ease-in-out;
+}
+
+.appNavMenuLink:hover {
+  color: var(--green);
+}
+
+/* Media Query for navbar */
+
+@media screen and (max-width: 900px) {
+  #navContainer {
+    padding-top: 30px;
+  }
+
+  .appNavbarLinks, #resumeContainer {
+    display: none;
+  }
+
+  #resumeButton {
+    margin-left: 2rem;
+  }
+
+  .appNavbar {
+    justify-content: space-between;
+  }
+}
+
+@media screen and (min-width: 900px) {
+  .navMenuContainer {
+    display: none;
+  }
+
+  .appNavbarMenu {
+    display: none;
+  }
+}

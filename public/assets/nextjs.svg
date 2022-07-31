@@ -1,0 +1,3 @@
+<?xml version="1.0" standalone="no"?>
+        <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" 
+        "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd"> <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-nextjs" width="200" height="200" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round" id="IconChangeColor"> <path stroke="#64ffda" d="M0 0h24v24H0z" fill="none" id="mainIconPathAttribute" stroke-width="0"></path> <path d="M9 15v-6l7.745 10.65a9 9 0 1 1 2.255 -1.993" id="mainIconPathAttribute" stroke="#64ffda"></path> <path d="M15 12v-3" id="mainIconPathAttribute" stroke="#64ffda"></path> </svg> 

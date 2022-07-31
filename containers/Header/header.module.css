@@ -1,0 +1,158 @@
+.headerContainer {
+  width: 100%;
+  margin-top: 80px;
+  padding: 0;
+  display: flex;
+  gap: 1rem;
+}
+
+.headerInfo {
+  flex: 1;
+  width: 80%;
+  display: flex;
+  align-items: flex-end;
+  flex-direction: column;
+  margin: 1rem;
+}
+
+.badgeCmp {
+  display: flex;
+  width: max(80%, max-content);
+  align-items: center;
+  justify-content: center;
+  padding-inline: 1rem;
+  border: 1px solid #8892b068;
+  border-radius: 8px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.18);
+}
+
+
+.skillsCmp {
+  display: flex;
+  width: min(200px, 100%);
+  flex-direction: column;
+  margin-top: 1rem;
+  border: 1px solid #8892b068;
+  border-radius: 8px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.18);
+}
+
+.pText {
+  margin: 4px;
+}
+
+.headText {
+  margin-top: 0;
+}
+
+.emoji {
+  font-size: 2rem;
+}
+
+.banner {
+  flex: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.headerCircle {
+  flex: 1;
+}
+
+.cirlceCmp {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  padding: 0.5rem;
+  border: 1px solid var(--slate);
+  box-shadow: 0 0 4px rgb(47, 255, 213);
+}
+
+.cirlceCmp:nth-child(1) {
+  width: 70px;
+  height: 70px;
+}
+
+.cirlceCmp:nth-child(2) {
+  margin: 1.75rem;
+  width: 140px;
+  height: 140px;
+}
+
+.cirlceCmp:nth-child(3) {
+  width: 100px;
+  height: 100px;
+}
+
+@media screen and (min-width: 2000px) {
+  .headerContainer {
+    padding-top: 8rem;
+  }
+
+  .cirlceCmp:nth-child(1) {
+    width: 100px;
+    height: 100px;
+  }
+
+  .cirlceCmp:nth-child(2) {
+    margin: 1.75rem;
+    width: 200px;
+    height: 200px;
+  }
+
+  .cirlceCmp:nth-child(3) {
+    width: 140px;
+    height: 140px;
+  }
+
+  .headerContainer {
+    padding: 6rem 1rem 2rem;
+  }
+}
+
+@media screen and (max-width: 2000px) {
+  .headerInfo {
+    width: 100%;
+    margin-right: 0rem;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .headerContainer {
+    flex-direction: column;
+  }
+
+  .banner {
+    margin-block: -7rem;
+  }
+
+  .headerInfo {
+    align-items: center;
+  }
+
+  .headerCircle {
+    display: flex;
+    justify-content: center;
+    grid-column: 1 / span 2;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .cirlceCmp:nth-child(1) {
+    width: 40px;
+    height: 40px;
+  }
+  
+  .cirlceCmp:nth-child(2) {
+    width: 110px;
+    height: 110px;
+  }
+  
+  .cirlceCmp:nth-child(3) {
+    width: 70px;
+    height: 70px;
+  }
+  
+}
