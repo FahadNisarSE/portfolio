@@ -16,8 +16,6 @@ body {
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   background-color: var(--navy);
-  scroll-behavior: smooth;
-  scroll-padding-top: 150px;
   width: 100%;
   color: var(--slate);
   caret-color: var(--navy);

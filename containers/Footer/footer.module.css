@@ -100,7 +100,7 @@
   font-size: 14px;
   line-height: 1.5rem;
   color: white;
-  outline-color: none;
+  outline: none;
 }
 
 .textarea {

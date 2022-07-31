@@ -122,8 +122,10 @@
 /* Media Query for navbar */
 
 @media screen and (max-width: 900px) {
+  
+
   #navContainer {
-    padding-top: 30px;
+    padding-top: 5px;
   }
 
   .appNavbarLinks, #resumeContainer {
