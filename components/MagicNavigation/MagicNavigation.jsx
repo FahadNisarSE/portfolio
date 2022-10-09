@@ -11,7 +11,7 @@ import Styles from './MagicNavigation.module.css';
 
 const MagicNavigation = () => {
 
-    const [current, setCurrent] = useState([false, true, false, false, false]);
+    const [current, setCurrent] = useState([true, false, false, false, false]);
 
     const [nav, setNav] = useState([
         {
