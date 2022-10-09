@@ -3,7 +3,7 @@ import MagicNavigation from "../MagicNavigation/MagicNavigation";
 
 import Styles from "./layout.module.css";
 
-export default function Layout() {
+function Layout() {
   return (
     <>
       <MagicNavigation />
@@ -15,3 +15,6 @@ export default function Layout() {
     </>
   );
 }
+
+
+export default Layout;
