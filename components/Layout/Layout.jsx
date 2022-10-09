@@ -1,13 +1,17 @@
 import SocialMedia from "../SocialMedia/SocialMedia";
+import MagicNavigation from "../MagicNavigation/MagicNavigation";
 
 import Styles from "./layout.module.css";
 
-export default function Layout () {
+export default function Layout() {
   return (
-    <div className={Styles.aside}>
-      <div className={Styles.layout}>
-        <SocialMedia />
+    <>
+      <MagicNavigation />
+      <div className={Styles.aside}>
+        <div className={Styles.layout}>
+          <SocialMedia />
+        </div>
       </div>
-    </div>
+    </>
   );
 }

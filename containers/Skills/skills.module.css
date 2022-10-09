@@ -93,6 +93,12 @@
   justify-content: flex-start;
   align-items: flex-start;
   margin: 1rem 0;
+  padding: 16px;
+  border-radius: 10px;
+}
+
+.experienceItem:hover {
+  background: linear-gradient(to right top, #0a192f, #102038, #162741, #1d2e4a, #233554);;
 }
 
 .skillExpYear {
@@ -176,6 +182,10 @@
 
   .skillExperience {
     margin-top: 2rem;
+  }
+
+  .experienceItem {
+    width: auto;
   }
 }
 

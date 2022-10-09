@@ -1,6 +1,5 @@
 import Head from "next/head";
 import Styles from "../styles/Home.module.css";
-import { useState } from "react";
 
 import {
   About,
@@ -19,7 +18,7 @@ export default function Home({abouts, experiences, skills, works}) {
       <Head>
         <title>Fahad Nisar</title>
         <meta name="description" content="My name is Fahad Nisar. I am a Front End Devloper. I am excited and eager to find new opportunities." />
-        <link rel="icon" href="../public/favicon.png" />
+        <link rel="icon" href='/favicon.png' />
       </Head>
       <header className={Styles.header}>
         <Navbar />

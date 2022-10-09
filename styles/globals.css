@@ -20,17 +20,23 @@ body {
   color: var(--slate);
   caret-color: var(--navy);
 }
+
 /* font-family: 'Edu VIC WA NT Beginner', cursive; */
 
-main, footer {
+main,
+footer {
   max-width: 1200px;
   margin-inline: auto;
 }
 
-#about, #home, #skills, #work, #contact {
+#about,
+#home,
+#skills,
+#work,
+#contact {
   min-height: 100vh;
   margin-inline: 3.3rem 2rem;
-  
+
   display: flex;
   flex-direction: column;
   padding-top: 50px;
@@ -74,7 +80,12 @@ a {
 }
 
 @media screen and (max-width: 600px) {
-  #about, #home, #skills, #work, #contact {
+
+  #about,
+  #home,
+  #skills,
+  #work,
+  #contact {
     margin-inline: 2rem;
   }
 }

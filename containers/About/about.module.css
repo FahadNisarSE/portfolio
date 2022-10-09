@@ -44,12 +44,19 @@
 }
 
 .information {
-  width: calc(100% - 300px);
+  width: calc(100% - 100px);
 }
 
 #intro {
   text-align: justify;
-  line-height: 1.5rem;
+  line-height: 2rem;
+}
+
+.tags {
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  width: 100%;
+  margin-block: 1rem;
 }
 
 #technologies {
@@ -66,20 +73,14 @@
 }
 
 .myImage {
-  display: flex;
-  min-width: 210px;
-  height: 260px;
+  min-width: 300px;
+  height: auto;
   display: flex;
   align-items: center;
   justify-content: center;
-  border-radius: 0.5rem;
   position: relative;
-  background-color: var(--lightest-navy);
   transition: all 0.3s ease;
-}
-
-.myImage:hover {
-  box-shadow: 0 0 6px var(--green);
+  padding: 10px;
 }
 
 .myImage > img {
@@ -122,6 +123,7 @@
   }
 
   #intro {
-    padding: 0;
+    padding: 5px;
+    text-align: left;
   }
 }

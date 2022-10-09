@@ -21,13 +21,13 @@ function Skills({expdata, skilldata}) {
         <motion.div className={Styles.skillList}>
           {skills?.map((skill, index) => (
             <motion.div
-              key={skill.name + index}
+              key={skill.name}
               whileInView={{ opacity: [0, 1] }}
               transition={{ duration: 0.5 }}
               className={Styles.skillItem}
             >
               <div className={Styles.skillImg}>
-                <img src={urlFor(skill.icon)} alt={skill.name} />
+                <img src={urlFor(skill.icon)} alt={skill.name} width={90} height={90} />
               </div>
               <p className="pText">{skill.name}</p>
             </motion.div>
@@ -44,12 +44,11 @@ function Skills({expdata, skilldata}) {
               </div>
               <motion.div className={Styles.skillExpWorks}>
                 {exp?.works?.map((work, index) => (
-                  <>
+                  <div key={work.name}>
                     <motion.div
                       whileInView={{ opacity: [0, 1] }}
                       transition={{ duration: 0.5 }}
                       className={Styles.skillExpWork}
-                      key={work.name + index}
                     >
                       <h4 className="boldText">{work.name}</h4>
                       <p className="pText">
@@ -59,7 +58,7 @@ function Skills({expdata, skilldata}) {
                     <div className={Styles.desc}>
                       {work.desc}
                     </div>
-                  </>
+                  </div>
                 ))}
               </motion.div>
             </motion.div>

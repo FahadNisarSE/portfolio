@@ -1,4 +1,5 @@
 .social {
+    position: fixed;
     align-self: flex-end;
     margin-bottom: 6rem;
     height: 130px;

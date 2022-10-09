@@ -7,8 +7,6 @@ import { urlFor, client } from "../../client";
 
 function Works({data}) {
 
-  console.log("works :: ", data);
-
   const [activeFilter, setActiveFilter] = useState("All");
   const [animateCard, setAnimateCard] = useState({ y: 0, opacity: 1 });
   const [works, setWorks] = useState(data);
@@ -45,10 +43,10 @@ function Works({data}) {
       </div>
       <div className={Styles.projects}>
         <div className={Styles.projectFilter}>
-          {["React Js", "Next Js", "Node Js", "All"].map((item, index) => (
+          {["React Js", "Next Js", "Node Js", "All"].map((item) => (
               <div
-                key={index}
-                onClick={() => handleWorkFilter(item)}    // Need to make this onClick work, right now this is not clickable
+                key={item}
+                onClick={() => handleWorkFilter(item)}
                 className={`${Styles.projectFilterItem} ${activeFilter === item ? `${Styles.active}` : ""}`}
               >
                 {item}
@@ -56,19 +54,18 @@ function Works({data}) {
             )
           )}
         </div>
-        {/* Need to make change here so hover works properly */}
         <motion.div
           animate={animateCard}
           transition={{ duration: 0.5, delayChildren: 0.5 }}
           className={Styles.projectCardContainer}
         >
-          {filterWork.map((work, index) => (
-            <div className={Styles.pojectCard} key={index}>
+          {filterWork.map((work) => (
+            <div className={Styles.pojectCard} key={work.name}>
               <div className={Styles.Img}>
                 <img src={urlFor(work.imgUrl)} alt={work.name} />
 
                 <motion.div
-                  whileHover={{ opacity: [0, 1] }} // Need to make change here so icons are visible at smaller devices 
+                  whileHover={{ opacity: [0, 1] }} 
                   transition={{
                     duration: 0.25,
                     ease: "easeInOut",
@@ -77,7 +74,7 @@ function Works({data}) {
                   }}
                   className={Styles.projectHover}
                 >
-                  <a href="work.projectLink" target="_blank" rel="noreferrer">
+                  <a href={work.projectLink} target="_blank" rel="noreferrer">
                     <motion.div
                       whileInView={{ scale: [0, 1] }}
                       whileHover={{ scale: [1, 0.9] }}
@@ -87,7 +84,7 @@ function Works({data}) {
                       <AiFillEye />
                     </motion.div>
                   </a>
-                  <a href="work.codeLink" target="_blank" rel="noreferrer">
+                  <a href={work.codeLink} target="_blank" rel="noreferrer">
                     <motion.div
                       whileInView={{ scale: [0, 1] }}
                       whileHover={{ scale: [1, 0.9] }}
@@ -103,8 +100,8 @@ function Works({data}) {
                 <h4 className="boldText">{work.title}</h4>
                 <p className="pText">{work.description}</p>
                 <div className={Styles.projectTags}>
-                {work.tags.map((tag, index) => (
-                    <p key={index}>{tag}</p>
+                {work.tags.map((tag,index) => (
+                    <p key={tag}>{tag}</p>
                   ))}
                 </div>
               </div>

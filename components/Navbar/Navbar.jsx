@@ -26,7 +26,7 @@ export default function Navbar() {
           </li>
         ))}
       </ul>
-      <div id={Styles.resumeContainer}><a href=""><button id={Styles.resumeButton}>Linked in</button></a></div>
+      <div id={Styles.resumeContainer}><a href="https://www.linkedin.com/in/fahad-nisar-a17745247/" target="_blank" rel="noreferrer"><button id={Styles.resumeButton}>Linked in</button></a></div>
 
       <div className={Styles.appNavbarMenu}>
         <HiMenuAlt3 onClick={() => setToggle(true)} className={Styles.appNavbarMenuIcon}/>
@@ -49,7 +49,7 @@ export default function Navbar() {
                 )
               )}
             </ul>
-            <a href=""><button id={Styles.resumeButton}>Linked in</button></a>
+            <a href="https://www.linkedin.com/in/fahad-nisar-a17745247/" target="_blank" rel="noreferrer"><button id={Styles.resumeButton}>Linked in</button></a>
           </motion.div>
         )}
       </div>
