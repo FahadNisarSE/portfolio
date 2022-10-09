@@ -3,7 +3,7 @@ import { images } from "../../constants";
 
 import Image from "next/image";
 import Styles from "./header.module.css";
-import Codetyping from '../../public/assets/Codetyping.gif';
+import Codetyping from '../../public/assets/CodeTyping.svg';
 
 const scaleVariants = {
   whileInView: {
